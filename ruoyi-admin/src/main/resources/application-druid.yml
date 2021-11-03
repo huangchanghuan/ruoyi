@@ -8,20 +8,21 @@ spring:
       ds0:
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/ry-vue?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+        url: jdbc:mysql://192.168.182.132:3306/ry-vue?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
         username: root
-        password: root
+        password: Sunstar123!
         initialSize: 5      #初始化大小
         maxActive: 10       #最大值
         maxWait: 200      #最大等待时间，配置获取连接等待超时，时间单位都是毫秒ms
         timeBetweenEvictionRunsMillis: 60000    #配置间隔多久才进行一次检测，检测需要关闭的空闲连接
         filters: stat,wall,logback
+#        connectionProperties: 'druid:stat:mergeSql=true;druid:stat:slowSqlMillis=5000'
       ds1:
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/ry-vue2?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+        url: jdbc:mysql://192.168.182.132:3306/ry-vue2?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
         username: root
-        password: root
+        password: Sunstar123!
         initialSize: 5      #初始化大小
         maxActive: 10       #最大值
         maxWait: 200      #最大等待时间，配置获取连接等待超时，时间单位都是毫秒ms
@@ -59,6 +60,9 @@ spring:
       broadcastTables: 
         t_config
       defaultDataSourceName: ds0
+
+    # 配置读写分离
+
     props:
       sql:
         show: true                        

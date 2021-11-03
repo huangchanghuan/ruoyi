@@ -76,6 +76,7 @@ public class SysNoticeController extends BaseController
     public AjaxResult edit(@Validated @RequestBody SysNotice notice)
     {
         notice.setUpdateBy(SecurityUtils.getUsername());
+        notice.setNoticeType(null);
         return toAjax(noticeService.updateNotice(notice));
     }
 
