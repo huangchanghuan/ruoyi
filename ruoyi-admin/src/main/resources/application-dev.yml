@@ -7,10 +7,10 @@ spring:
             # 主库数据源
             master:
 #                url: jdbc:mysql://192.168.182.132:3307/my_sharding_db?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
-                url: jdbc:mysql://192.168.182.132:3306/ry_vue?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+                url: jdbc:mysql://192.168.182.132:3306/ry-vue?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
                 username: root
-                password: root
-            # 从库数据源
+#                password: root
+                password: Sunstar123!            # 从库数据源
             slave:
                 # 从数据源开关/默认关闭
                 enabled: false
