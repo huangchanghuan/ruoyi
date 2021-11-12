@@ -47,6 +47,8 @@ spring:
                 login-username: ruoyi
                 login-password: 123456
             filter:
+                slf4j:
+                    enabled: true
                 stat:
                     enabled: true
                     # 慢SQL记录

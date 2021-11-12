@@ -38,6 +38,7 @@ logging:
   level:
     com.ruoyi: debug
     org.springframework: warn
+    org.quartz: debug
 
 # Spring配置
 spring:
@@ -46,8 +47,8 @@ spring:
     # 国际化资源文件路径
     basename: i18n/messages
   profiles: 
-    active: dev
-#    active: shardingproxy
+#    active: dev
+    active: shardingproxy
   # 文件上传
   servlet:
      multipart:
