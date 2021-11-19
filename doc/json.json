@@ -1,0 +1,35 @@
+{
+  "total": 2,
+  "rows": [
+    {
+      "searchValue": null,
+      "createBy": "admin",
+      "createTime": "2021-11-03 22:21:19",
+      "updateBy": "",
+      "updateTime": null,
+      "remark": null,
+      "params": {},
+      "noticeId": 662782572803129344,
+      "noticeTitle": "22",
+      "noticeType": "1",
+      "noticeContent": "<p>2</p>",
+      "status": "0"
+    },
+    {
+      "searchValue": null,
+      "createBy": "admin",
+      "createTime": "2021-11-03 06:17:45",
+      "updateBy": "",
+      "updateTime": null,
+      "remark": null,
+      "params": {},
+      "noticeId": 662540084343472129,
+      "noticeTitle": "1",
+      "noticeType": "1",
+      "noticeContent": "<p>1</p>",
+      "status": "0"
+    }
+  ],
+  "code": 200,
+  "msg": "查询成功"
+}
