@@ -1,5 +1,12 @@
 ## 平台简介
 
+1.sharingjdbc集群只能用4.0.1版本，可以使用ui，jdbc，proxy，zk结合
+2.sharding 5.0.0版本的ui不支持，要等待sharing ui更新到5.0.0版本才考虑使用
+3.sharding 4.1.1或者4.1.0没有对应的zk客户端版本，所以也不能使用
+
+
+
+
 * 前端采用Vue、Element UI。
 * 后端采用Spring Boot、Spring Security、Redis & Jwt。
 * 权限认证使用Jwt，支持多终端认证系统。

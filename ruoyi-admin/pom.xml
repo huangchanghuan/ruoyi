@@ -17,14 +17,63 @@
 
     <properties>
         <spring-cloud-alibaba.version>2.2.5.RELEASE</spring-cloud-alibaba.version>
+        <shardingsphere.version>5.0.0</shardingsphere.version>
+        <sharding-sphere.version>4.0.1</sharding-sphere.version>
     </properties>
 
     <dependencies>
+        <!--sharding 5.0.0版本 -->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.shardingsphere</groupId>-->
+<!--            <artifactId>shardingsphere-jdbc-core-spring-boot-starter</artifactId>-->
+<!--            <version>${shardingsphere.version}</version>-->
+<!--        </dependency>-->
+<!--        &lt;!&ndash; 使用 ZooKeeper 时，需要引入此模块 &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.shardingsphere</groupId>-->
+<!--            <artifactId>shardingsphere-cluster-mode-repository-zookeeper-curator</artifactId>-->
+<!--            <version>${shardingsphere.version}</version>-->
+<!--        </dependency>-->
+<!--        &lt;!&ndash; 使用 XA 事务时，需要引入此模块 &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.shardingsphere</groupId>-->
+<!--            <artifactId>shardingsphere-transaction-xa-core</artifactId>-->
+<!--            <version>${shardingsphere.version}</version>-->
+<!--        </dependency>-->
+
+        <!--sharding 4.0.1版本 -->
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-            <version>${spring-cloud-alibaba.version}</version>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>20.0</version>
+            <scope>compile</scope>
         </dependency>
+        <!-- for spring boot -->
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>sharding-jdbc-orchestration-spring-boot-starter</artifactId>
+            <version>${sharding-sphere.version}</version>
+        </dependency>
+
+        <!--若使用zookeeper, 请加入下面Maven坐标-->
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>sharding-orchestration-reg-zookeeper-curator</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+
+
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
+<!--            <version>${spring-cloud-alibaba.version}</version>-->
+<!--        </dependency>-->
+
+
+<!--        <dependency>-->
+<!--            <groupId>org.apache.shardingsphere</groupId>-->
+<!--            <artifactId>sharding-jdbc-spring-boot-starter</artifactId>-->
+<!--        </dependency>-->
         <!-- spring-boot-devtools -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -36,6 +85,12 @@
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>guava</artifactId>
+                    <groupId>com.google.guava</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!--防止进入swagger页面报类型转换错误，排除2.9.2中的引用，手动增加1.5.21版本-->
@@ -61,6 +116,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.47</version>
         </dependency>
 
         <!-- 核心模块-->

@@ -45,6 +45,7 @@ spring:
     basename: i18n/messages
   profiles: 
     active: druid
+#    active: shardingproxy
   # 文件上传
   servlet:
      multipart:

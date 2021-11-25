@@ -1,0 +1,54 @@
+
+# 5.0.0 还需要zk的版本支持，难搞
+#spring.shardingsphere.mode.type=Cluster
+#spring.shardingsphere.mode.repository.type=ZooKeeper
+#spring.shardingsphere.mode.repository.props.namespace=governance-spring-boot-shardingsphere-test
+#spring.shardingsphere.mode.repository.props.server-lists=localhost:2181
+#spring.shardingsphere.mode.overwrite=true
+#spring:
+#  shardingsphere:
+#    mode:
+#      type: Cluster
+#      repository:
+#        type: ZooKeeper
+#        props:
+#          namespace: orchestration
+#          server-lists: 10.2.37.30:2181,10.2.37.29:2181,10.2.37.19:2181
+#      overwrite: true
+
+# 4.1.1版本
+#spring:
+#  shardingsphere:
+#    orchestration:
+#      orchestration_ds:
+#        orchestration-type: registry_center,config_center
+#        instance-type: zookeeper
+#        namespace: orchestration
+#        server-lists: 192.168.182.133:2181,192.168.182.134:2181
+#        props:
+#          overwrite: true
+
+
+# 4.0.1版本
+spring:
+  shardingsphere:
+    orchestration:
+      name: orchestration_ds
+      overwrite: true
+      registry:
+        type: zookeeper
+        namespace: orchestration
+        server-lists: 192.168.182.133:2181
+
+
+#  spring.shardingsphere.orchestration.name=spring_boot_ds_sharding
+#  spring.shardingsphere.orchestration.overwrite=true
+#  spring.shardingsphere.orchestration.registry.type=zookeeper
+#  spring.shardingsphere.orchestration.registry.namespace=shardingsphere
+#  spring.shardingsphere.orchestration.registry.server-lists=192.168.118.209:2181
+
+#  spring.shardingsphere.orchestration.spring_boot_ds_sharding.orchestration-type=registry_center,config_center
+#  spring.shardingsphere.orchestration.spring_boot_ds_sharding.instance-type=zookeeper
+#  spring.shardingsphere.orchestration.spring_boot_ds_sharding.server-lists=localhost:2181
+#  spring.shardingsphere.orchestration.spring_boot_ds_sharding.namespace=orchestration-spring-boot-sharding-test
+#  spring.shardingsphere.orchestration.spring_boot_ds_sharding.props.overwrite=true

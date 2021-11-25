@@ -1,9 +1,12 @@
-spring:
-  cloud:
-    nacos:
-      config:
-        server-addr: 10.2.37.3:4080
-        namespace: 6669e1bd-b4fc-4956-b0e1-65f59820f5bf
-        file-extension: yaml
-        group: DEFAULT_GROUP
-        name: application-druid
+#spring:
+#  cloud:
+#    nacos:
+#      config:
+#        server-addr: 10.2.37.3:4080
+#        namespace: 6669e1bd-b4fc-4956-b0e1-65f59820f5bf
+#        file-extension: yaml
+#        group: DEFAULT_GROUP
+#        name: application-druid
+
+
+

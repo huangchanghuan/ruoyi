@@ -5,6 +5,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure;
+import org.springframework.context.annotation.Bean;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import javax.sql.DataSource;
 
 /**
  * 启动程序
@@ -12,6 +18,7 @@ import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure;
  * @author ruoyi
  */
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class,DruidDataSourceAutoConfigure.class })
+@EnableTransactionManagement
 public class RuoYiApplication
 {
     public static void main(String[] args)
@@ -29,4 +36,11 @@ public class RuoYiApplication
                 " |  |  \\    /  \\      /           \n" +
                 " ''-'   `'-'    `-..-'              ");
     }
+    @Bean
+    public PlatformTransactionManager txManager(final DataSource dataSource) {
+        return new DataSourceTransactionManager(dataSource);
+    }
+
+
+
 }
