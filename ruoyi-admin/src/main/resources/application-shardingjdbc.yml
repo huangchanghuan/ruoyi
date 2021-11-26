@@ -17,28 +17,28 @@
 #      overwrite: true
 
 # 4.1.1版本
-#spring:
-#  shardingsphere:
-#    orchestration:
-#      orchestration_ds:
-#        orchestration-type: registry_center,config_center
-#        instance-type: zookeeper
-#        namespace: orchestration
-#        server-lists: 192.168.182.133:2181,192.168.182.134:2181
-#        props:
-#          overwrite: true
-
-
-# 4.0.1版本
 spring:
   shardingsphere:
     orchestration:
-      name: orchestration_ds
-      overwrite: true
-      registry:
-        type: zookeeper
+      orchestration_ds:
+        orchestration-type: registry_center,config_center
+        instance-type: zookeeper
         namespace: orchestration
-        server-lists: 192.168.182.133:2181
+        server-lists: 192.168.182.133:2181,192.168.182.134:2181
+        props:
+          overwrite: false
+
+
+# 4.0.1版本
+#spring:
+#  shardingsphere:
+#    orchestration:
+#      name: orchestration_ds
+#      overwrite: true
+#      registry:
+#        type: zookeeper
+#        namespace: orchestration
+#        server-lists: 192.168.182.133:2181
 
 
 #  spring.shardingsphere.orchestration.name=spring_boot_ds_sharding

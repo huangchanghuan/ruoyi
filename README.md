@@ -1,8 +1,8 @@
 ## 平台简介
 
-1.sharingjdbc集群只能用4.0.1版本，可以使用ui，jdbc，proxy，zk结合
+1.sharingjdbc集群用4.0.1/4.1.1版本，可以使用ui，jdbc，proxy，zk结合
 2.sharding 5.0.0版本的ui不支持，要等待sharing ui更新到5.0.0版本才考虑使用
-3.sharding 4.1.1或者4.1.0没有对应的zk客户端版本，所以也不能使用
+3.建议用zk而不是nacos等，因为ui只支持zk配置注册中心和配置中心
 
 
 
