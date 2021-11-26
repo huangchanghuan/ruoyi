@@ -3,6 +3,8 @@
 1.sharingjdbc集群用4.0.1/4.1.1版本，可以使用ui，jdbc，proxy，zk结合
 2.sharding 5.0.0版本的ui不支持，要等待sharing ui更新到5.0.0版本才考虑使用
 3.建议用zk而不是nacos等，因为ui只支持zk配置注册中心和配置中心
+4.配置多数据源工具，可能有些场景不需要走shardingDataSource，但是sharding是可以配置表具体走哪个数据节点的
+
 
 
 
