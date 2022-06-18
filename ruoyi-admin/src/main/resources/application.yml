@@ -42,13 +42,15 @@ logging:
 
 # Spring配置
 spring:
+  rocket-api:
+    view-enabled: false
   # 资源信息
   messages:
     # 国际化资源文件路径
     basename: i18n/messages
   profiles: 
-#    active: dev
-    active: shardingproxy
+    active: dev
+#    active: shardingproxy
   # 文件上传
   servlet:
      multipart:
@@ -96,7 +98,7 @@ token:
     secret: abcdefghijklmnopqrstuvwxyz
     # 令牌有效期（默认30分钟）
     expireTime: 30
-  
+
 # MyBatis配置
 # https://baomidou.com/config/
 mybatis-plus:
